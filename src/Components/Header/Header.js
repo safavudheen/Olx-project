@@ -10,7 +10,7 @@ import {AuthContext, FirebaseContext} from '../../store/Context'
 import {useHistory} from "react-router-dom"
 import Login from '../Login/Login';
 function Header() {
-  const history =useHistory
+  const history =useHistory()
  
 
   const{user} = useContext(AuthContext)

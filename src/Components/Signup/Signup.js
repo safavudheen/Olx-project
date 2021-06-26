@@ -8,7 +8,7 @@ import './Signup.css';
 export default function Signup() { 
 
 const history=useHistory()
-const [username, setUsername]=useState('');
+const [username,setUsername]=useState('');
 const [email,setEmail]       =useState('');
 const [phone, setPhone]      =useState('');
 const [password,setPassword] =useState('');
@@ -24,6 +24,7 @@ firebase.auth().createUserWithEmailAndPassword(email,password)
       phone:phone
     })
     .then(()=>history.push('/login')) 
+    // it may need to change
   }) })
 }
 
@@ -39,7 +40,7 @@ firebase.auth().createUserWithEmailAndPassword(email,password)
             type="text"
             id="fname"
             name="name"
-            defaultValue="John"
+            defaultValue="Safa"
 //change1
             value={username}
             onChange={(e)=>setUsername(e.target.value)}           
@@ -66,7 +67,7 @@ firebase.auth().createUserWithEmailAndPassword(email,password)
             type="number"
             id="fname"
             name="phone"
-            defaultValue="Doe"
+            defaultValue=""
             value={phone}
             onChange={(e)=>setPhone(e.target.value)}
           />

@@ -15,7 +15,8 @@ const Create = () =>{
   const[price,setPrice]=useState('');
   const[image,setImage]=useState(null)
   const  handleSubmit=()=>{
-    firebase.storage().ref(`/image/${image.name}` ).put(image).then(({ref})=>{ref.getDownloadURL().then((url)=>{
+    firebase.storage().ref(`/image/${image.name}` ).put(image).then(({ref})=>{
+      ref.getDownloadURL().then((url)=>{
       console.log(url)
       firebase.firestore().collection('products').add({
         name:name,

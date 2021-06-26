@@ -31,12 +31,12 @@ function View() {
         </div>
         
         {userDetails &&<div className="contactDetails">
-          <p>Seller details</p>
+          <p>Seller Details</p>
           <p>{userDetails.username}</p>
           <p>{userDetails.phone}</p>
         </div>}
       </div>
-  
+
     </div>
   );
 }

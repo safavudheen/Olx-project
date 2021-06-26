@@ -24,7 +24,6 @@ function App() {
      firebase.auth().onAuthStateChanged((user)=>{
        setUser(user)
      })
-
 })
   return (
     <div>

@@ -19,7 +19,6 @@ const handleLogin=(e)=>{
     .catch((error)=>{alert(error.message)})
 }
 
-
   return (
     <div>
       <div className="loginParentDiv">
