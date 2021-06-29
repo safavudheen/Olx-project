@@ -3,10 +3,14 @@
   display: flex;
 }
 .viewParentDiv .imageShowDiv {
+  text-align: -webkit-center;
   padding: 16px;
   width: 70vw;
 }
-.viewParentDiv .imageShowDiv img {
+.viewParentDiv .imageShowDiv .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 65vw;
   height: 85vh;
 }
@@ -47,4 +51,11 @@
   color: #002f34;
   font-weight: 400;
   padding: 0;
+}
+.realimg{
+  
+    display: block;
+    max-width:100%;
+    max-height:100%;
+  
 }
