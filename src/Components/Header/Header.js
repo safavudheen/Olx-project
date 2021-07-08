@@ -42,7 +42,8 @@ function Header() {
           <Arrow></Arrow>
         </div>
         <div className="loginPage">
-          <span >{user ? `Welcome ${user.displayName}` :'Login'}</span>
+          <span >{user ? `Welcome ${user.displayName}` :
+          <p onClick={()=>{history.push("/login")}}>Login</p> }</span>
           <br />
         </div>
          {user && <span  onClick={()=>{

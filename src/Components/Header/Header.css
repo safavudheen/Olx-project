@@ -154,7 +154,14 @@
 .sellMenu .sellMenuContent span {
   margin-left: 5px;
 }
-
+.loginPage{
+  display: block;
+}
+p {
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
 @media only screen and (max-width: 700px) {
   .placeSearch,
   .productSearch,

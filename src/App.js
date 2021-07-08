@@ -14,7 +14,7 @@ import Post from './store/PostContext'
  */
 import Home from './Pages/Home';
 import { AuthContext, FirebaseContext } from './store/Context';
-import Posts from './Components/Posts/Posts';
+
 function App() {
 
   const {setUser} = useContext(AuthContext)
