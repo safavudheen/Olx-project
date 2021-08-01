@@ -1,3 +1,6 @@
+
+
+
 .moreView {
   margin: 16px 16px 24px;
   padding: 16px 16px 32px;
@@ -28,12 +31,14 @@
 }
 
 .moreView .cards {
+  height: 19rem;
   white-space: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
 }
 
-.card {
+.card1 {
+  background-color: white;
   margin-right: 15px;
   padding: 13px;
   max-width: 222px;
@@ -43,37 +48,37 @@
   cursor: pointer;
 }
 
-.card .favorite {
+.card1 .favorite {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.card .image {
+.card1 .image {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card .image img {
+.card1 .image img {
   height: 100px;
   max-width: 100%;
   max-height: 100%;
   min-height: 100%;
   text-align: center;
 }
-.card .content .rate {
+.card1 .content .rate {
   margin-top: 10px;
   font-size: larger;
   font-weight: bold;
 }
-.card .content .kilometer {
+.card1 .content .kilometer {
   font-size: medium;
 }
-.card .content .name {
+.card1 .content .name {
   font-size: small;
 }
-.card .date {
+.card1 .date {
   display: flex;
   justify-content: flex-end;
   font-size: small;

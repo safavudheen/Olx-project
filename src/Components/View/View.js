@@ -2,6 +2,9 @@ import React from 'react';
 import {useEffect,useState,useContext} from 'react';
 import { FirebaseContext } from '../../store/Context';
 import {PostContext} from '../../store/PostContext'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import './View.css';
 function View() {
   const [userDetails,setUserDetails] = useState()
@@ -14,14 +17,25 @@ function View() {
     })
    },[])
   return(
+    <Container> 
+     <Row> 
+     <Col>
     <div className="viewParentDiv">
+     
+    <Row> 
+      <Col xs='12' md="5" lg="7">
       <div className="imageShowDiv">
         <img className="realimg"
           src={postDetails.url}
           alt=""
         />
       </div>
+      </Col>
+      <Col></Col>
+      <Col lg='4'>
       <div className="rightSection">
+          <Row>
+         <Col xs="12">
         <div className="productDetails">
           <p>&#x20B9;
             {postDetails.price} </p>
@@ -29,15 +43,26 @@ function View() {
           <p>{postDetails.category}</p>
           <span>{postDetails.name}</span>
         </div>
-        
+        </Col>
+        </Row>
+          <Row>
+        <Col sm="12">
         {userDetails &&<div className="contactDetails">
           <p>Seller Details</p>
           <p>{userDetails.username}</p>
           <p>{userDetails.phone}</p>
         </div>}
+        </Col>
+        </Row>
       </div>
+      </Col>
 
+      </Row>
+      
     </div>
+    </Col>
+    </Row>
+     </Container>
   );
 }
 export default View; 

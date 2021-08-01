@@ -1,10 +1,13 @@
 import React from 'react';
+import { Col,Row,Container } from 'react-bootstrap';
 
 import './Footer.css';
 
 function Footer() {
   return (
+    <Container><Row><Col>
     <div className="footerParentDiv">
+  
       <div className="content">
         <div>
           <div className="heading">
@@ -45,11 +48,15 @@ function Footer() {
           </div>
         </div>
       </div>
+      
       <div className="footer">
         <p>Other Countries Pakistan - South Africa - Indonesia</p>
         <p>Free Classifieds in India. © 2006-2021 OLX</p>
       </div>
+      
     </div>
+    
+    </Col></Row> </Container>
   );
 }
 

@@ -1,11 +1,16 @@
 .viewParentDiv {
+  justify-content: center;
   padding-top: 4em;
   display: flex;
 }
 .viewParentDiv .imageShowDiv {
+  display: block;
   text-align: -webkit-center;
+  margin-top: 3rem;
   padding: 16px;
-  width: 70vw;
+  max-width: 47rem;
+  min-height: 12rem;
+  
 }
 .viewParentDiv .imageShowDiv .img {
   display: flex;
@@ -18,7 +23,7 @@
 .viewParentDiv .rightSection {
   padding: 16px;
   margin-top: 3em;
-  width: 30vw;
+  /* width: 30vw; */
 }
 
 .viewParentDiv .rightSection .productDetails :first-child {
@@ -35,13 +40,14 @@
   padding: 6px;
   border-radius: 6px;
   margin-bottom: 2em;
-  width: 100%;
+  min-width: 15rem;
 }
 
 .viewParentDiv .rightSection .contactDetails {
   border: 1px solid black;
   padding: 6px;
   border-radius: 6px;
+  min-width: 15rem;
 }
 
 .viewParentDiv .rightSection .contactDetails :first-child {

@@ -5,6 +5,8 @@ import Heart from '../../assets/Heart';
 import './Post.css';
 import { PostContext } from '../../store/PostContext';
 import {useHistory} from 'react-router-dom';
+import {Container,Row,Col } from 'react-bootstrap'
+
 
 function Posts() {
 
@@ -24,16 +26,20 @@ function Posts() {
  })},[])
   
   
-    return( <div className="postParentDiv">
+    return(
+      <Container>
+      <div className="postParentDiv">
         <div className="moreView">
           <div className="heading">
             <span>Quick Menu</span>
             <span>View more</span>
           </div>
+         
           <div className="cards">
-
+         
+            
 { products.map(product=>{
-            return <div className="card" onClick={()=>{setPostDetails(product)
+            return <div className="card1" onClick={()=>{setPostDetails(product)
             history.push('/view')}} >
               <div className="favorite">
                 <Heart></Heart>
@@ -53,14 +59,18 @@ function Posts() {
             })  
               }
 
+           
+         
           </div>
+         
+         
         </div>
         <div className="recommendations">
           <div className="heading">
             <span>Fresh recommendations</span>
           </div>
           <div className="cards">
-            {products.map(product=>{return<div className="card"
+            {products.map(product=>{return<div className="card1"
             onClick={()=>{setPostDetails(product) 
               history.push("/view")}
             }>
@@ -82,6 +92,7 @@ function Posts() {
           </div>
         </div>
       </div>
+      </Container>
     );
   }
   export default Posts;

@@ -9,6 +9,7 @@ import SellButtonPlus from '../../assets/SellButtonPlus';
 import {AuthContext, FirebaseContext} from '../../store/Context'
 import {useHistory} from "react-router-dom"
 import Login from '../Login/Login';
+import { Container ,Row,Col } from 'react-bootstrap';
 function Header() {
   const history =useHistory()
  
@@ -16,7 +17,11 @@ function Header() {
   const{user} = useContext(AuthContext)
   const{firebase}=useContext(FirebaseContext)
   return (
+   
     <div className="headerParentDiv">
+       <Container>
+      <Row>
+        <Col>
       <div className="headerChildDiv">
         <div className="brandName">
           <OlxLogo></OlxLogo>
@@ -27,15 +32,22 @@ function Header() {
           <Arrow></Arrow>
         </div>
         <div className="productSearch">
+        
+          <Row>
+          <Col sm='12'>
           <div className="input">
             <input
               type="text"
               placeholder="Find car,mobile phone and more..."
             />
           </div>
+          </Col>
+          </Row>
+            
           <div className="searchAction">
             <Search color="#ffffff"></Search>
           </div>
+         
         </div>
         <div className="language">
           <span> ENGLISH </span>
@@ -59,7 +71,11 @@ function Header() {
           </div>
         </div>
       </div>
+      </Col>
+      </Row>
+    </Container>
     </div>
+    
   );
 }
 
